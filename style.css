@@ -57,8 +57,22 @@ body{
     row-gap: 10px;
 }
 .size,
-.color{
+.modes{
     display: flex;
     justify-content: space-between;
+    align-items:start;
     gap: 10px;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
 }

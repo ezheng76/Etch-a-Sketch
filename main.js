@@ -20,22 +20,17 @@ function createCanvas (size){
     draw();
 }
 
-function draw (color){
+function draw (mode){
     const pixels = document.querySelectorAll('.pixel');
     pixels.forEach((pixel) => {
         pixel.addEventListener('mouseover', (pixel) => {
-            
-            if (color === "black"){
+            if (mode === "black"){
                 pixel.target.style.backgroundColor = "black";
-            } else if (color === "progressive-black"){
-                pixel.target.style.backgroundColor = "black";
-                pixel.target.style.opacity = 0.2 * pixel.target.style.opacity;
-                
-                
-                
-            } else if (color === "random"){
+            } else if (mode === "random"){
                 var randomColor = Math.floor(Math.random()*16777215).toString(16);
                 pixel.target.style.backgroundColor = "#" + randomColor;
+            } else if (mode){
+                pixel.target.style.backgroundColor = "white";
             }
         });
     });
@@ -51,7 +46,7 @@ function changeSize (){
 }
 
 function changeColor (){
-    const colors = document.querySelectorAll('.color');
+    const colors = document.querySelectorAll('.mode');
     colors.forEach((color) => {
         color.addEventListener('click', () => {
             draw(color.getAttribute("id"))
@@ -64,8 +59,6 @@ function startApp() {
     draw("black");
     changeSize();
     changeColor();
-
-    // eraseListener();
 }
 
 startApp();

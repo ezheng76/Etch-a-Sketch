@@ -6,8 +6,9 @@
     <title>Etch A Sketch</title>
     <script src="main.js" defer></script>
     <link rel="stylesheet" type="text/css" href="style.css" >
+    <script src="https://kit.fontawesome.com/4c536a6bd5.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="hide-scrollbar">
     <div class="header">
         Etch-A-Sketch
     </div>
@@ -21,13 +22,19 @@
                 <button class="grid-size" id="medium" value="32">Medium (32x32)</button>
                 <button class="grid-size" id="large" value="64">Large (64x64)</button>
             </div>
-            <div class="color">
-                <div>Colors: </div>
-                <button class="color" id="black">Black</button>
-                <button class="color" id="progressive-black">Progressive Black</button>
-                <button class="color" id="random">Random</button>
+            <div class="modes">
+                <div>Modes: </div>
+                <button class="mode" id="black">Black</button>
+                <button class="mode" id="random">Random</button>
+                <button class="mode" id="erase">Erase</button>
             </div>
         </div>
     </div>
+
+    <footer class="footer">
+        Copyright ©
+        <script>document.write(new Date().getFullYear())</script>
+        <i class="fab fa-github" aria-hidden="true"></i>
+    </footer>
 </body>
 </html>
